@@ -7,10 +7,13 @@ int main( ){
   cout << "Enter a number : ";
   cin >> number;
   
+  bool flag = true;
   for(int i = 2 ; i < number ; i++)
-    if(number % i == 0)
+    if(number % i == 0){
+      flag = false;
       break;
-  if(i < number)
+    }
+  if(flag == false)
     cout <<"NOT PRIME ";
   else
     cout <<"PRIME";
